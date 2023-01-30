@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import PostForm from './PostForm';
 import PostCard from './PostCard';
 
 export default function SinglePost(props){
@@ -6,17 +7,20 @@ export default function SinglePost(props){
     const [post, setPost] = useState([]);
     const [postid, setPostid] = useState('');
 
-    console.log(props.Apostid);
     function updateSinglePost(postid){
         setPostid(postid);
     };
+
+    console.log(postid);
+    console.log(props);
 
     useEffect(() => {
         fetch(`https://responsible-knowledgeable-restaurant.glitch.me/blog/posts/${postid}`)
             .then((res) => res.json())
             .then((data) => {
-                setPost(data);
-                console.log(data)
+                console.log(data);
+                const postinfo = data;
+                setPost(postinfo);
                 }
             );
     }, [postid]);
@@ -25,8 +29,9 @@ export default function SinglePost(props){
 
     return(
         <>
-        <h1>Here is the post:</h1>
-        <PostCard key={post.id} post={post} />
+        <h1>Find a post:</h1>
+        <PostForm updateSinglePost={updateSinglePost} key={postid} post={post} />
+        <PostCard post={ post }/>
         </>
     );
 }

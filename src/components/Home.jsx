@@ -12,7 +12,7 @@ export default function Home() {
 
     return (
         <>
-            <h1 className="text-center">Welcome to the Social Network</h1>
+            <h1 className="text-center mt-4 mb-4">Welcome to the Social Network</h1>
             {posts.map( post => <PostCard key={post.id} post={post} />)}
         </>
     )

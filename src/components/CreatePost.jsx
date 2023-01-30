@@ -43,13 +43,13 @@ export default function CreatePost(props) {
 
     return (
         <>
-            <h3 className="text-center">Create A New Post</h3>
+            <h3 className="text-center mt-4">Create A New Post</h3>
             <form action="" onSubmit={handleSubmit}>
-                <div className="form-group">
+                <div className="form-group p-3 bg-info bg-opacity-10 border border-info border-start-0 rounded-end">
                     <input type="text" className="form-control my-3" placeholder='Enter Title of Post' name='title'/>
                     <input type="text" className="form-control my-3" placeholder='Enter Content of Post' name='content'/>
 
-                    <input type="submit" value="Create Post" className="btn btn-success w-100" />
+                    <input type="submit" value="Create Post" className="btn btn-secondary w-100" />
                 </div>
             </form>
         </>

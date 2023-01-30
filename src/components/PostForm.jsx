@@ -4,7 +4,7 @@ export default function PostForm(props) {
 
     const handleFindPost = e => {
         e.preventDefault();
-        let postid = e.target.postid.value;
+        let postid = e.target.post.value;
         props.updateSinglePost(postid);
         e.target.postid.value = '';
     }
@@ -15,7 +15,7 @@ export default function PostForm(props) {
                 <input type="text" name="post" placeholder="Enter Post ID" className='form-control'/>
             </div>
             <div className="col">
-                <input type="submit" className="btn btn-success w-100" value="Search" />
+                <input type="submit" className="btn btn-secondary w-100" value="Search" />
             </div>
         </form>
     );

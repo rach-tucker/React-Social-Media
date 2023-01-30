@@ -41,13 +41,13 @@ export default function Login(props) {
 
     return (
         <>
-            <h3 className="text-center">Login</h3>
+            <h3 className="text-center mt-4">Login</h3>
             <form action="" onSubmit={handleSubmit}>
-                <div className="form-group">
-                    <input type="text" className="form-control my-3" placeholder='Enter Username' name='username' />
+                <div className="form-group p-3 bg-info bg-opacity-10 border border-info border-start-0 rounded-end">
+                    <input type="text" className="form-control my-3 mt-" placeholder='Enter Username' name='username' />
                     <input type="password" className="form-control my-3" placeholder='Enter Password' name='password' />
 
-                    <input type="submit" value="Log In" className="btn btn-success w-100" />
+                    <input type="submit" value="Log In" className="btn btn-secondary w-100" />
                 </div>
             </form>
         </>

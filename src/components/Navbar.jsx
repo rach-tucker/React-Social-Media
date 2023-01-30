@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom';
 export default function Navbar(props) {
 
     return (
-        <nav className="navbar bg-body-tertiary">
+        <nav className="navbar bg-dark text-info">
             <div className='container-fluid'>
                 {
-                    <Link className='navbar-brand' to="/">Welcome</Link>
+                    <Link className='navbar-brand text-info' to="/">Welcome</Link>
                 }
                     <Link className='nav-link' to='/'>Home</Link>
                     {props.loggedIn ? (

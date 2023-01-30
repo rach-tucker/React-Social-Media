@@ -53,15 +53,15 @@ export default class Signup extends Component {
             <>
                 {this.state.redirect ? <Navigate to='/' /> :
                 <>
-                    <h3 className="text-center">Sign Up</h3>
+                    <h3 className="text-center mt-4">Sign Up</h3>
                     <form action="" onSubmit={this.handleSignup}>
-                        <div className="form-group">
+                        <div className="form-group p-3 bg-info bg-opacity-10 border border-info border-start-0 rounded-end">
                             <input type="text" className="form-control my-3" placeholder='Enter Email' name='email' />
                             <input type="text" className="form-control my-3" placeholder='Enter Username' name='username' />
                             <input type="password" className="form-control my-3" placeholder='Enter Password' name='password' />
                             <input type="password" className="form-control my-3" placeholder='Confirm Password' name='confirmPass' />
 
-                            <input type="submit" value="Signup" className="btn btn-success w-100" />
+                            <input type="submit" value="Signup" className="btn btn-secondary w-100" />
                         </div>
                     </form>
                 </>
